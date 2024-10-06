@@ -29,7 +29,7 @@ form.addEventListener('submit', (event) => {
           art: event.target.elements['album-art'].value,
       });
       const album = document.querySelector('#all-albums-list');
-      album.innerHTML = album.innerHTML + `
+      album.innerHTML = `
       <div class="col">
       <div class="card shadow-sm">
         <img class="bd-placeholder-img card-img-top" src="img/${event.target.elements['album-art'].value}"/>
@@ -39,7 +39,7 @@ form.addEventListener('submit', (event) => {
         </div>
       </div>
     </div>
-    `;
+    ` + album.innerHTML;
   } else {
       console.log('Form is invalid. Please correct the errors above.');
   }
