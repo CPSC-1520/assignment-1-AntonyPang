@@ -40,6 +40,7 @@ form.addEventListener('submit', (event) => {
       </div>
     </div>
     ` + album.innerHTML;
+    form.reset();
   } else {
       console.log('Form is invalid. Please correct the errors above.');
   }
